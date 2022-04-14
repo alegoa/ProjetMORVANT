@@ -8,6 +8,6 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
-    - run: cat ../../../indices/indice* > indices.md
+    - run: cat indices/indice* > indices.md
    
     - run: echo "🍏 This job's status is ${{ job.status }}."
