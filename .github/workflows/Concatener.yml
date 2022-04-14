@@ -4,6 +4,6 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - run: cat indices* > indices.md
+      - run: cat indices/indices* > indices.md
    
       - run: echo "🍏 This job's status is ${{ job.status }}."
