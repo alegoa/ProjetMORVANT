@@ -1,0 +1,9 @@
+name: Concatener les indices
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: cat indices* > indices.md
+   
+      - run: echo "🍏 This job's status is ${{ job.status }}."
