@@ -1,5 +1,8 @@
 name: Concatener 
-on: [push]
+on:
+  push:
+    paths:
+    - 'indices/**'
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
