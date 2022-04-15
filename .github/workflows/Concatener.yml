@@ -12,3 +12,5 @@ jobs:
     - run: cat indices/indice* > in.md
     - name : ech
     - run: echo indices/indice3
+    - name : echhh
+    - run: echo indices/indice15
