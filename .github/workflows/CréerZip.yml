@@ -23,7 +23,7 @@ jobs:
         run:  git status
       - name: add
         run:  
-              git add indices.md
+              git add indices.zip
               
       - name: commit
         run: 
