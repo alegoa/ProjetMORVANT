@@ -1,113 +1,3 @@
-### Indice 10 : recherche ###
-
-#### `grep` ####
-
-Chercher à l'intérieur de fichiers est aussi utile. Essayer
-
-    grep secret README.md
-
-Cela affichera toutes les lignes qui contiennent le mot "secret". `grep` est
-l'acronyme de "GNU Regular Expression Parsing". GNU est une communauté qui
-publie des logiciels libres (dont la source est publique) et gratuits. Une
-expression régulière est un motif de texte. Dans ce cas, notre expression
-régulière est uniquement "secret", et `grep` trouvera uniquement les
-correspondances exactes. Les expressions régulières peuvent être plus
-compliquées. Par exemple,
-
-    grep m.n README.md
-
-trouvera toutes les lignes qui contiennent les lettres m et n séparées
-uniquement d'un seul caractère. Consultez la page de manuel pour découvrir de
-nombreuses fonctionnalités intéressantes de `grep`.
-
-#### Trouver l'indice 11 ####
-
-L'indication suivante est le mot qui apparaît avant "koala" dans
-`/usr/share/dict/words`. Il existe une option spécifique de `grep` qui rend
-cette recherche facile.
-
-### Indice 11 : Mario ###
-
-#### Transmettre l'information dans un tuyau ####
-
-De nombreuses commandes vont afficher leur résultat. On dit que c'est la sortie
-standard (standard output) ou `stdout`. Nous avons vu précédemment qu'on peut
-rediriger la sortie standard vers un fichier (avec `>`). Il y a aussi l'entrée
-standard (standard input) ou `stdin`, que l'on peut manipuler avec `<`.
-
-Par exemple, `cat < README.md` est équivalent à `cat README.md`. Mais entrée et
-sortie standard peuvent être reliées à l'aide d'un tuyau (pipe en anglais),
-avec `|`. Par exemple, on peut compter le nombre de fichiers et répertoires
-dans un dossier ainsi :
-
-    ls | wc -w
-
-Cela revient à prendre la sortie de `ls` et à l'utiliser comme entrée de `wc`.
-Un autre example :
-
-    grep ^sand /usr/share/dict/words | wc -l
-
-va afficher le nombre de mots qui commencent par "sand". Le symbole accent
-circonflexe `^` est une expression régulière qui signifie "débute par". On peut
-aussi utiliser `$` pour "termine par".
-
-#### Trier ####
-
-Il peut être utile de trier des données dans l'ordre alphabétique. Notons que
-le fichier dictionnaire est déjà trié. On peut créer notre propre copie non
-triée ainsi
-
-    sort -R /usr/share/dict/words > random_words
-
-Maintenant, on peut `sort random_words` pour obtenir l'ordre alphabétique de
-nouveau, ou `sort -r random_words` pour l'ordre inverse de l'ordre
-alphabétique. 
-
-#### Trouver l'indice 12 ####
-
-
-Utiliser la commande `ls -la /bin` pour obtenir une grande liste de fichiers.
-La 5e colonne dans cette liste est la taille des fichiers en octets. Trouver
-les options de `sort` pour afficher la liste de ces fichiers triés du plus
-grand au plus petit (par ordre décroissant).
-
-Ces options forment votre indication. Par exemple, si votre commande était
-`sort -a -b -c`, alors votre indication serait
-
-    ./indice_suivant.py 12 -a -b -c
-    
-### Indice 12 : Le défi final ###
-
-#### Trouver l'indice final 13 ####
-
-En utilisant tout ce que vous avez appris pour l'instant et le fait que les
-vrais indices sont différents des faux indices, trouver l'indice final !
-
-### Indice 13 : Bravo ! ###
-
-#### Vous avez trouvé tous les indices ####
-
- _________________________________________ 
-/                                         \
-|          🎉 Félicitations ! 🥳           |
-\                                         /
- ----------------------------------------- 
-  \                           .       .
-   \                         / `.   .' " 
-    \                .---.  <    > <    >  .---.
-     \               |    \  \ - ~ ~ - /  /    |
-         _____          ..-~             ~-..-~
-        |     |   \~~~\.'                    `./~~~/
-       ---------   \__/                        \__/
-      .'  O    \     /               /       \  " 
-     (_____,    `._.'               |         }  \/~~~/
-      `----.          /       }     |        /    \__/
-            `-.      |       /      |       /      `. ,~~|
-                ~-.__|      /_ - ~ ^|      /- _      `..-'   
-                     |     /        |     /     ~-.     `-. _  _  _
-                     |_____|        |_____|         ~ - . _ _ _ _ _>
-
-
 ### Indice 2 : panorama ###
 
 #### `pwd` ####
@@ -475,4 +365,114 @@ exécutez
 Maintenant, vous avez ce fichier qui sert de dictionnaire pour la correction
 orthographique. L'indication est le nombre de mots dans ce dictionnaire
 `/usr/share/dict/words`.
+
+### Indice 10 : recherche ###
+
+#### `grep` ####
+
+Chercher à l'intérieur de fichiers est aussi utile. Essayer
+
+    grep secret README.md
+
+Cela affichera toutes les lignes qui contiennent le mot "secret". `grep` est
+l'acronyme de "GNU Regular Expression Parsing". GNU est une communauté qui
+publie des logiciels libres (dont la source est publique) et gratuits. Une
+expression régulière est un motif de texte. Dans ce cas, notre expression
+régulière est uniquement "secret", et `grep` trouvera uniquement les
+correspondances exactes. Les expressions régulières peuvent être plus
+compliquées. Par exemple,
+
+    grep m.n README.md
+
+trouvera toutes les lignes qui contiennent les lettres m et n séparées
+uniquement d'un seul caractère. Consultez la page de manuel pour découvrir de
+nombreuses fonctionnalités intéressantes de `grep`.
+
+#### Trouver l'indice 11 ####
+
+L'indication suivante est le mot qui apparaît avant "koala" dans
+`/usr/share/dict/words`. Il existe une option spécifique de `grep` qui rend
+cette recherche facile.
+
+### Indice 11 : Mario ###
+
+#### Transmettre l'information dans un tuyau ####
+
+De nombreuses commandes vont afficher leur résultat. On dit que c'est la sortie
+standard (standard output) ou `stdout`. Nous avons vu précédemment qu'on peut
+rediriger la sortie standard vers un fichier (avec `>`). Il y a aussi l'entrée
+standard (standard input) ou `stdin`, que l'on peut manipuler avec `<`.
+
+Par exemple, `cat < README.md` est équivalent à `cat README.md`. Mais entrée et
+sortie standard peuvent être reliées à l'aide d'un tuyau (pipe en anglais),
+avec `|`. Par exemple, on peut compter le nombre de fichiers et répertoires
+dans un dossier ainsi :
+
+    ls | wc -w
+
+Cela revient à prendre la sortie de `ls` et à l'utiliser comme entrée de `wc`.
+Un autre example :
+
+    grep ^sand /usr/share/dict/words | wc -l
+
+va afficher le nombre de mots qui commencent par "sand". Le symbole accent
+circonflexe `^` est une expression régulière qui signifie "débute par". On peut
+aussi utiliser `$` pour "termine par".
+
+#### Trier ####
+
+Il peut être utile de trier des données dans l'ordre alphabétique. Notons que
+le fichier dictionnaire est déjà trié. On peut créer notre propre copie non
+triée ainsi
+
+    sort -R /usr/share/dict/words > random_words
+
+Maintenant, on peut `sort random_words` pour obtenir l'ordre alphabétique de
+nouveau, ou `sort -r random_words` pour l'ordre inverse de l'ordre
+alphabétique. 
+
+#### Trouver l'indice 12 ####
+
+
+Utiliser la commande `ls -la /bin` pour obtenir une grande liste de fichiers.
+La 5e colonne dans cette liste est la taille des fichiers en octets. Trouver
+les options de `sort` pour afficher la liste de ces fichiers triés du plus
+grand au plus petit (par ordre décroissant).
+
+Ces options forment votre indication. Par exemple, si votre commande était
+`sort -a -b -c`, alors votre indication serait
+
+    ./indice_suivant.py 12 -a -b -c
+    
+### Indice 12 : Le défi final ###
+
+#### Trouver l'indice final 13 ####
+
+En utilisant tout ce que vous avez appris pour l'instant et le fait que les
+vrais indices sont différents des faux indices, trouver l'indice final !
+
+### Indice 13 : Bravo ! ###
+
+#### Vous avez trouvé tous les indices ####
+
+ _________________________________________ 
+/                                         \
+|          🎉 Félicitations ! 🥳           |
+\                                         /
+ ----------------------------------------- 
+  \                           .       .
+   \                         / `.   .' " 
+    \                .---.  <    > <    >  .---.
+     \               |    \  \ - ~ ~ - /  /    |
+         _____          ..-~             ~-..-~
+        |     |   \~~~\.'                    `./~~~/
+       ---------   \__/                        \__/
+      .'  O    \     /               /       \  " 
+     (_____,    `._.'               |         }  \/~~~/
+      `----.          /       }     |        /    \__/
+            `-.      |       /      |       /      `. ,~~|
+                ~-.__|      /_ - ~ ^|      /- _      `..-'   
+                     |     /        |     /     ~-.     `-. _  _  _
+                     |_____|        |_____|         ~ - . _ _ _ _ _>
+
 
