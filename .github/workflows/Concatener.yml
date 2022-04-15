@@ -10,4 +10,4 @@ jobs:
       uses: actions/checkout@v2
     - run: cat indices/indice* > in.md
    
-    - run: echo "🍏 This job's status is ${{ job.status }}."
+    - run: echo indices/indice3
