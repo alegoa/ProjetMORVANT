@@ -7,6 +7,7 @@ jobs:
       - uses: actions/checkout@v1
       - name : copier
         run: cat indices/indice* > in.md
+      
       - name: check for changes
         run: git status
       - name: stage changed files
@@ -14,12 +15,13 @@ jobs:
               git add in.md
               echo in.md
       - name: commit changed files
-        run: git commit -m "Auto updating"
+        run: git config --global user.name "Antoine Morvant"
+            git config --global user.email "antoine.morvant@hotmail.fr"
+            git commit -m "Auto updating"
       - name: fetch from master
         run: git fetch origin master
       - name: push code to master
-              git config --global user.name "alegoa"
-              git config --global user.email "antoine.morvant@hotmail.fr"
+              
         run: git push origin HEAD:master
    
        
