@@ -4,7 +4,7 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       
       
       - name: gitconf
@@ -28,8 +28,8 @@ jobs:
       - name: commit changed files
         run: 
             git commit -m "Auto updating"
-      #- name: fetch from master
-      #  run: git fetch origin main
+      - name: fetch from master
+        run: git fetch origin main
       - name: push vers main
               
         run: git push origin main
