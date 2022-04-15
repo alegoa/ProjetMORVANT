@@ -1,5 +1,7 @@
 //Rapport projet informatique   MORVANT Antoine
 
+https://github.com/alegoa/ProjetMORVANT.git
+
 
 cd ./12345
 
@@ -94,6 +96,6 @@ sort -r -n -k 5 so
 // Je trouve 90602
 //Indice 12
 // Il faut trouver l'indice final
-// J'observe que tout les faux indices ont l'air d'être les mêmes, et que tout les indices ont au moins le mot "indice" à l'interieur. Il est donc probable qu'en faisant une recherche récursive regex dans le dossier indices en cherchant les fichiers avec le mot "indice" à l'interieur, je tombe sur les fichiers indice réels uniquement, je pourais alors y trouver le dernier fichier indice.
+// J'observe que tout les faux indices ont l'air d'être les mêmes, et que tout les indices ont au moins le mot "indice" à l'interieur. Il est donc probable qu'en faisant une recherche récursive regex dans le dossier indices en cherchant les fichiers avec le mot "indice" à l'interieur, je tombe sur les fichiers indice réels uniquement, je pourrais alors y trouver le dernier fichier indice.
 grep -rl 'indices' -e 'indice'
-// Je tombe sur tous les fichiers indices que j'ai trouvé auparavant, avec en plus un nouveau fichier, le 12072... c'est le dernier indice ! Joli dinosaure.
+// Je tombe sur tous les fichiers indices que j'ai trouvé auparavant, avec en plus un nouveau fichier, celui du dossier 12072... c'est le dernier indice ! Joli dinosaure.
