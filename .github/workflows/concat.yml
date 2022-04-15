@@ -13,7 +13,7 @@ jobs:
       - name: stage changed files
         run:  
               git add in.md
-              echo in.md
+              
       - name: commit changed files
         run: git config --global user.name "Antoine Morvant"
             git config --global user.email "antoine.morvant@hotmail.fr"
