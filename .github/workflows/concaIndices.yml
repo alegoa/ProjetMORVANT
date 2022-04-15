@@ -9,23 +9,23 @@ jobs:
       
       - name: gitconf
         run: git config --global user.name "Antoine Morvant"
-      - name: git show
+      - name: montrer mon nom pour checker
         run: git config user.name
       - name: git conf
         run: git config --global user.email "antoine.morvant@hotmail.fr"
-      - name: git c
+      - name: git check
         run: git checkout main
-      - name: git c
+      - name: git pull
         run: git pull origin main
-      - name : copier
-        run: cat indices/indice* > in.md
-      - name: check for changes
+      - name : conactenation
+        run: cat indices/indice* > indices.md
+      - name: status
         run:  git status
-      - name: stage changed files
+      - name: add
         run:  
               git add in.md
               
-      - name: commit changed files
+      - name: commit
         run: 
             git commit -m "Auto updating"
       - name: fetch from master
