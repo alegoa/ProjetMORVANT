@@ -9,8 +9,8 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     - name : copier
-    - run: cat indices/indice* > in.md
+      run: cat indices/indice* > in.md
     - name : ech
-    - run: echo indices/indice3
+      run: echo indices/indice3
     - name : echhh
-    - run: echo indices/indice15
+      run: echo indices/indice15
