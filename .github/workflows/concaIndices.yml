@@ -14,7 +14,7 @@ jobs:
       - name: git c
         run: git checkout main
       - name: git c
-        run: git pull origin master
+        run: git pull origin main
       - name : copier
         run: cat indices/indice* > in.md
       - name: check for changes
