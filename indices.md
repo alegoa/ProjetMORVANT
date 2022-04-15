@@ -264,3 +264,82 @@ La variable `PATH` dit à l'ordinateur où sont les programmes. Chaque chemin qu
 peut contenir un programme est placé entre deux points. L'indication vers le
 prochain indice est le premier chemin listé dans votre `PATH`.
 
+### Indice 7 : de la tête à la queue ###
+
+#### `head` ####
+
+Si on demande d'afficher le contenu d'un long fichier avec `cat`, tout
+s'affiche sans retour à la ligne et il est difficile de s'y retrouver.
+
+La commande `head` permet d'afficher les 10 premières lignes d'un fichier
+texte. Consultez la documentation de `head` pour trouver le paramètres qui
+permet d'afficher uniquement les `n` dernières lignes.
+
+Une commande analogue est `tail`, qui permet d'afficher les dernières
+lignes d'un fichier.
+
+#### Suivi d'un fichier ####
+
+`tail` a l'option spéciale `-f` qui permet de surveiller un fichier. Au lieu
+d'afficher les dernières lignes et quitter, `tail -f` met à jour l'affichage si
+ce fichier est modifié par un autre processus.
+
+C'est particulièrement utile pour des fichiers journaux. La commande suivante
+va afficher les 10 dernières lignes de `var/adm/messages` et surveiller ses
+modifications :
+
+    tail -f /var/adm/messages
+
+Pour interrompre la surveillance par `tail`, on peut appuyer sur `Ctrl` et `C`.
+
+#### Trouver l'indice 8 ####
+
+Le répertoires `images` contient des fichiers images en apparence tout à fait
+normaux. Mais un message secret a été caché dans leur cinq dernières lignes.
+L'indication vers l'indice 8 est formé à partir du dernier mot de
+chacune de ces lignes pour le fichier `girafe.jpg`.
+### Indice 8 : fais-moi un sandwich ###
+
+https://xkcd.com/149/
+
+#### `sudo` ####
+
+Linux a le concept d'utilisateur `root`, qui est similaire à l'administrateur
+Windows. Cet utilisateur est aussi appelé super utilisateur. Si vous voulez
+faire une action en tant que root, mais rester authentifié(e) sous votre
+compte, il y a la commande `sudo`. Son nom signifie "super-user-do".
+
+#### Installer un logiciel ####
+
+Vous pouvez avoir besoin d'un nouveau programme. Pour installer un logiciel
+sous certaines versions de Linux (Debian et Ubuntu), on utilise la commande
+`apt`. Sous d'autres versions (Fedora, CentOS), on utilise la commande `dnf`.
+
+Par exemple, pour installer un dictionnaire, tapez la commande
+
+    apt install ispell
+
+Vous devriez avoir un message d'erreur demandant si vous êtes root. Cela
+signifie que vous n'avez pas les permissions d'installer un logiciel. À la
+place, essayez
+
+    sudo apt install ispell
+    
+Maintenant, un dictionnaire devrait être installé.
+
+
+#### Trouver l'indice 9 ####
+
+Créez le fichier `toutpuissant.txt` qui contient le texte
+    
+    Je veux utiliser sudo.
+    MP
+
+où vous remplacez `MP` par vos initiales.
+Déplacez le fichier `toutpuissant.txt` dans le répertoire `/usr/local`
+
+Pour vérifier que tout s'est bien passé et obtenir l'indice suivant, utilisez
+vos initiales comme indication.
+
+Si vous n'avez pas les droits pour `sudo`, votre indication est `impossible`.
+
