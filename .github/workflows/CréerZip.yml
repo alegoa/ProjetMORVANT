@@ -2,7 +2,7 @@ name: CréerZip
 on:
   push:
     paths:
-    - 'folder1/**'
+    - 'indices/**'
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
