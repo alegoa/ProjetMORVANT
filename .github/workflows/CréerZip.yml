@@ -1,5 +1,8 @@
 name: CréerZip 
-on: [push]
+on:
+  push:
+    paths:
+    - 'folder1/**'
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
