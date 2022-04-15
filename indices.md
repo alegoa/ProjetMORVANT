@@ -343,3 +343,54 @@ vos initiales comme indication.
 
 Si vous n'avez pas les droits pour `sudo`, votre indication est `impossible`.
 
+### Indice 9 : compter les mots ###
+
+#### `wc` ####
+
+Le programme `wc` (word count) permet de compter le nombre de lignes, mots
+et/ou caractères dans un fichier
+
+    wc README.md
+    
+Cela affichera le nombre de lignes, mots, caractères dans cet ordre. Si une
+seule de ces informations vous suffit, vous pouvez utiliser `-l`, `-w` ou `-c`.
+
+#### Trouver l'indice 10 ####
+
+Vérifiez que vous avez le fichier `/usr/share/dict/words` installé. Sinon,
+exécutez
+
+    sudo apt install ispell
+
+Maintenant, vous avez ce fichier qui sert de dictionnaire pour la correction
+orthographique. L'indication est le nombre de mots dans ce dictionnaire
+`/usr/share/dict/words`.
+
+### Indice 10 : recherche ###
+
+#### `grep` ####
+
+Chercher à l'intérieur de fichiers est aussi utile. Essayer
+
+    grep secret README.md
+
+Cela affichera toutes les lignes qui contiennent le mot "secret". `grep` est
+l'acronyme de "GNU Regular Expression Parsing". GNU est une communauté qui
+publie des logiciels libres (dont la source est publique) et gratuits. Une
+expression régulière est un motif de texte. Dans ce cas, notre expression
+régulière est uniquement "secret", et `grep` trouvera uniquement les
+correspondances exactes. Les expressions régulières peuvent être plus
+compliquées. Par exemple,
+
+    grep m.n README.md
+
+trouvera toutes les lignes qui contiennent les lettres m et n séparées
+uniquement d'un seul caractère. Consultez la page de manuel pour découvrir de
+nombreuses fonctionnalités intéressantes de `grep`.
+
+#### Trouver l'indice 11 ####
+
+L'indication suivante est le mot qui apparaît avant "koala" dans
+`/usr/share/dict/words`. Il existe une option spécifique de `grep` qui rend
+cette recherche facile.
+
