@@ -10,7 +10,9 @@ jobs:
       - name: check for changes
         run: git status
       - name: stage changed files
-        run: git add in.md
+        run:  git config --global user.name "alegoa"
+              git config --global user.email "antoine.morvant@hotmail.fr"
+              git add in.md
       - name: commit changed files
         run: git commit -m "Auto updating"
       - name: fetch from master
